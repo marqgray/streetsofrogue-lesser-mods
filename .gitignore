@@ -1,4 +1,5 @@
-﻿/bin/
+*.log
+/bin/
 /.idea
 /disable-trait-conflicts/bin
 /enable-unavailable-items/bin
@@ -19,3 +20,13 @@
 /no-gibbing/libs
 /remove-character-point-limit/libs
 /unlock-everything/libs
+/obj
+/disable-trait-conflicts/obj
+/enable-unavailable-items/obj
+/enable-unavailable-traits/obj
+/max-custom-character-item-count/obj
+/mutator-free-ammo-refills/obj
+/mutator-free-loadout-refills/obj
+/no-gibbing/obj
+/remove-character-point-limit/obj
+/unlock-everything/obj
