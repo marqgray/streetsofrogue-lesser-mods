@@ -1,0 +1,15 @@
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\mqKeezy_UnlockEverything.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\mqKeezy_UnlockEverything.pdb
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\0Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\Assembly-CSharp_publicized.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\BepInEx.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\BepInEx.Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\UnityEngine.CoreModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\UnityEngine.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\UnityEngine.Physics2DModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\bin\Release\UnityEngine.UI.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\obj\Release\unlock-everything.csprojAssemblyReference.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\obj\Release\unlock-everything.csproj.CoreCompileInputs.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\obj\Release\unlock-everything.csproj.CopyComplete
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\obj\Release\mqKeezy_UnlockEverything.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\unlock-everything\obj\Release\mqKeezy_UnlockEverything.pdb

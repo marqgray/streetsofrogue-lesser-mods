@@ -1,0 +1,15 @@
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\mqKeezy_DisableTraitConflicts.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\mqKeezy_DisableTraitConflicts.pdb
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\0Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\Assembly-CSharp_publicized.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\BepInEx.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\BepInEx.Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\UnityEngine.CoreModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\UnityEngine.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\UnityEngine.Physics2DModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\bin\Release\UnityEngine.UI.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\obj\Release\disable-trait-conflicts.csprojAssemblyReference.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\obj\Release\disable-trait-conflicts.csproj.CoreCompileInputs.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\obj\Release\disable-trait-conflicts.csproj.CopyComplete
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\obj\Release\mqKeezy_DisableTraitConflicts.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\disable-trait-conflicts\obj\Release\mqKeezy_DisableTraitConflicts.pdb

@@ -1,0 +1,15 @@
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\mqKeezy_EnableUnavailableItems.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\mqKeezy_EnableUnavailableItems.pdb
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\0Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\Assembly-CSharp_publicized.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\BepInEx.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\BepInEx.Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\UnityEngine.CoreModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\UnityEngine.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\UnityEngine.Physics2DModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\bin\Release\UnityEngine.UI.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\obj\Release\enable-unavailable-items.csprojAssemblyReference.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\obj\Release\enable-unavailable-items.csproj.CoreCompileInputs.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\obj\Release\enable-unavailable-items.csproj.CopyComplete
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\obj\Release\mqKeezy_EnableUnavailableItems.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\enable-unavailable-items\obj\Release\mqKeezy_EnableUnavailableItems.pdb

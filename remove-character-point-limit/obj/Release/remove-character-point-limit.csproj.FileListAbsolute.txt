@@ -1,0 +1,15 @@
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\mqKeezy_RemoveCharacterPointLimit.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\mqKeezy_RemoveCharacterPointLimit.pdb
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\0Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\Assembly-CSharp_publicized.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\BepInEx.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\BepInEx.Harmony.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\UnityEngine.CoreModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\UnityEngine.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\UnityEngine.Physics2DModule.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\bin\Release\UnityEngine.UI.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\obj\Release\remove-character-point-limit.csprojAssemblyReference.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\obj\Release\remove-character-point-limit.csproj.CoreCompileInputs.cache
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\obj\Release\remove-character-point-limit.csproj.CopyComplete
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\obj\Release\mqKeezy_RemoveCharacterPointLimit.dll
+E:\Projects\streetsofrogue\streetsofrogue-lesser-mods\remove-character-point-limit\obj\Release\mqKeezy_RemoveCharacterPointLimit.pdb
