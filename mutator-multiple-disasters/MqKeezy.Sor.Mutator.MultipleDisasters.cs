@@ -12,6 +12,11 @@ namespace mqKeezy_Mutator_MultipleDisasters
 
         private void Awake()
         {
+            Mutator = RogueLibs.CreateCustomMutator(id: "mqKeezy.MultipleDisasters",
+                unlockedFromStart: true,
+                new CustomNameInfo(english: "Multiple Disasters"),
+                new CustomNameInfo(english: ""));
+
             new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
         }
     }
