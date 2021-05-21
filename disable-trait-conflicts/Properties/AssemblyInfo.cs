@@ -7,20 +7,20 @@ using mqKeezy_DisableTraitConflicts.Properties;
 // associated with an assembly.
 [assembly: AssemblyTitle(ModInfo.Title)]
 [assembly: AssemblyDescription(ModInfo.Description)]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration(configuration: "")]
 [assembly: AssemblyCompany(ModInfo.Author)]
 [assembly: AssemblyProduct(ModInfo.Title)]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCopyright(copyright: "Copyright ©  2021")]
+[assembly: AssemblyTrademark(trademark: "")]
+[assembly: AssemblyCulture(culture: "")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(visibility: false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1F79B8A8-8693-44E9-9C50-8B73191784A3")]
+[assembly: Guid(guid: "1F79B8A8-8693-44E9-9C50-8B73191784A3")]
 
 // Version information for an assembly consists of the following four values:
 //

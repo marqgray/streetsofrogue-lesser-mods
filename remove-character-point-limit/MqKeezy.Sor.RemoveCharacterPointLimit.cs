@@ -16,7 +16,7 @@ namespace mqKeezy_RemoveCharacterPointLimit
         {
             private class CharacterCreationPatch
             {
-                [HarmonyPatch(typeof(CharacterCreation), "OpenCharacterCreation", typeof(bool))]
+                [HarmonyPatch(typeof(CharacterCreation), methodName: "OpenCharacterCreation", typeof(bool))]
                 private class OpenCharacterCreation
                 {
                     [HarmonyPostfix]

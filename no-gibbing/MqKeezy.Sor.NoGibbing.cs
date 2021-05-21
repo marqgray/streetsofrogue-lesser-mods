@@ -19,7 +19,7 @@ namespace mqKeezy_NoGibbing
         {
             private class StatusEffectsPatch
             {
-                [HarmonyPatch(typeof(StatusEffects), "NormalGib")]
+                [HarmonyPatch(typeof(StatusEffects), methodName: "NormalGib")]
                 private class NormalGib
                 {
                     [HarmonyPrefix]

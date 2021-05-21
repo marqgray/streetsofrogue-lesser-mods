@@ -19,18 +19,24 @@ namespace mqKeezy_DisableTraitConflicts
         {
             private class UnlocksPatch
             {
-                [HarmonyPatch(typeof(Unlocks), "LoadInitialUnlocks")]
+                [HarmonyPatch(typeof(Unlocks), methodName: "LoadInitialUnlocks")]
                 private class LoadInitialUnlocks
                 {
                     [HarmonyPostfix]
                     private static void Postfix()
                     {
-                        if (disabledTraitConflicts) return;
+                        if (disabledTraitConflicts)
+                        {
+                            return;
+                        }
 
-                        foreach (var unlock in
-                            GameController.gameController.sessionDataBig.unlocks.Where(unlock => unlock.unlockType ==
+                        foreach (Unlock unlock in
+                            GameController.gameController.sessionDataBig.unlocks.Where(predicate: unlock =>
+                                unlock.unlockType ==
                                 "Trait"))
+                        {
                             unlock.cancellations.Clear();
+                        }
 
                         disabledTraitConflicts = true;
                     }

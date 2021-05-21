@@ -18,16 +18,21 @@ namespace mqKeezy_UnlockEverything
         {
             private class UnlocksPatch
             {
-                [HarmonyPatch(typeof(Unlocks), "LoadInitialUnlocks")]
+                [HarmonyPatch(typeof(Unlocks), methodName: "LoadInitialUnlocks")]
                 private class LoadInitialUnlocks
                 {
                     [HarmonyPostfix]
                     private static void Postfix()
                     {
-                        if (_unlockedAll) return;
+                        if (_unlockedAll)
+                        {
+                            return;
+                        }
 
-                        foreach (var unlock in GameController.gameController.sessionDataBig.unlocks)
+                        foreach (Unlock unlock in GameController.gameController.sessionDataBig.unlocks)
+                        {
                             unlock.unlocked = true;
+                        }
 
                         _unlockedAll = true;
                     }

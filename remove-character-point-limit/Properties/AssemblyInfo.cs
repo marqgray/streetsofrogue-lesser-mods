@@ -7,20 +7,20 @@ using mqKeezy_RemoveCharacterPointLimit.Properties;
 // associated with an assembly.
 [assembly: AssemblyTitle(ModInfo.Title)]
 [assembly: AssemblyDescription(ModInfo.Description)]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration(configuration: "")]
 [assembly: AssemblyCompany(ModInfo.Author)]
 [assembly: AssemblyProduct(ModInfo.Title)]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCopyright(copyright: "Copyright ©  2021")]
+[assembly: AssemblyTrademark(trademark: "")]
+[assembly: AssemblyCulture(culture: "")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(visibility: false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ECCCD29C-6A2C-419F-B49C-209623AFDF07")]
+[assembly: Guid(guid: "ECCCD29C-6A2C-419F-B49C-209623AFDF07")]
 
 // Version information for an assembly consists of the following four values:
 //

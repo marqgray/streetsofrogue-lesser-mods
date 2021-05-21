@@ -12,10 +12,10 @@ namespace mqKeezy_Mutator_FreeLoadoutRefills
 
         public void Awake()
         {
-            Mutator = RogueLibs.CreateCustomMutator("mqKeezy.FreeLoadoutRefills",
-                true,
-                new CustomNameInfo("Free Loadout Refills"),
-                new CustomNameInfo(""));
+            Mutator = RogueLibs.CreateCustomMutator(id: "mqKeezy.FreeLoadoutRefills",
+                unlockedFromStart: true,
+                new CustomNameInfo(english: "Free Loadout Refills"),
+                new CustomNameInfo(english: ""));
 
             new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
         }
@@ -25,7 +25,7 @@ namespace mqKeezy_Mutator_FreeLoadoutRefills
             private class PlayfieldObjectPatch
             {
                 [HarmonyPatch(typeof(PlayfieldObject),
-                    "determineMoneyCost",
+                    methodName: "determineMoneyCost",
                     typeof(InvItem),
                     typeof(int),
                     typeof(string))]

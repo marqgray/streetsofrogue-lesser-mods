@@ -21,17 +21,22 @@ namespace mqKeezy_EnableUnavailableTraits
         {
             private class UnlocksPatch
             {
-                [HarmonyPatch(typeof(Unlocks), "LoadInitialUnlocks")]
+                [HarmonyPatch(typeof(Unlocks), methodName: "LoadInitialUnlocks")]
                 private class LoadInitialUnlocks
                 {
                     [HarmonyPostfix]
                     private static void Postfix()
                     {
-                        if (enabledAllTraits) return;
+                        if (enabledAllTraits)
+                        {
+                            return;
+                        }
 
-                        foreach (var unlock in
-                            GameController.gameController.sessionDataBig.unlocks.Where(unlock => unlock.unlockType ==
+                        foreach (Unlock unlock in
+                            GameController.gameController.sessionDataBig.unlocks.Where(predicate: unlock =>
+                                unlock.unlockType ==
                                 "Trait"))
+                        {
                             if (unlock.unavailable)
                             {
                                 GameController.gameController.sessionDataBig.traitUnlocks.Add(unlock);
@@ -57,13 +62,16 @@ namespace mqKeezy_EnableUnavailableTraits
                                 unlock.unlocked = true;
                                 unlock.unavailable = false;
                             }
+                        }
 
-                        foreach (var unlock in from traitId in Enum.GetNames(typeof(StatusEffectNameDB.rowIds))
+                        foreach (Unlock unlock in from traitId in Enum.GetNames(typeof(StatusEffectNameDB.rowIds))
                             let foundTrait =
-                                GameController.gameController.sessionDataBig.traitUnlocks.Any(unlockedTrait =>
-                                    unlockedTrait.unlockName == traitId)
+                                GameController.gameController.sessionDataBig.traitUnlocks.Any(
+                                    predicate: unlockedTrait =>
+                                        unlockedTrait.unlockName == traitId)
                             where !foundTrait
-                            select new Unlock(traitId, "Trait", true, 0, 0, 0)
+                            select new Unlock(traitId, myType: "Trait", isUnlocked: true, myCost: 0, myCost2: 0,
+                                myCost3: 0)
                             {
                                 onlyInCharacterCreation = false, unavailable = false, unlocked = true
                             })

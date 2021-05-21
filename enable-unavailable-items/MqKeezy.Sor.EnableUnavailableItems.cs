@@ -21,17 +21,22 @@ namespace mqKeezy_EnableUnavailableItems
         {
             private class UnlocksPatch
             {
-                [HarmonyPatch(typeof(Unlocks), "LoadInitialUnlocks")]
+                [HarmonyPatch(typeof(Unlocks), methodName: "LoadInitialUnlocks")]
                 private class LoadInitialUnlocks
                 {
                     [HarmonyPostfix]
                     private static void Postfix()
                     {
-                        if (enabledAllItems) return;
+                        if (enabledAllItems)
+                        {
+                            return;
+                        }
 
-                        foreach (var unlock in
-                            GameController.gameController.sessionDataBig.unlocks.Where(unlock => unlock.unlockType ==
+                        foreach (Unlock unlock in
+                            GameController.gameController.sessionDataBig.unlocks.Where(predicate: unlock =>
+                                unlock.unlockType ==
                                 "Item"))
+                        {
                             if (unlock.unavailable)
                             {
                                 GameController.gameController.sessionDataBig.itemUnlocks.Add(unlock);
@@ -57,13 +62,15 @@ namespace mqKeezy_EnableUnavailableItems
                                 unlock.unlocked = true;
                                 unlock.unavailable = false;
                             }
+                        }
 
-                        foreach (var unlock in from itemId in Enum.GetNames(typeof(ItemNameDB.rowIds))
+                        foreach (Unlock unlock in from itemId in Enum.GetNames(typeof(ItemNameDB.rowIds))
                             let foundItem =
-                                GameController.gameController.sessionDataBig.itemUnlocks.Any(unlockedItem =>
+                                GameController.gameController.sessionDataBig.itemUnlocks.Any(predicate: unlockedItem =>
                                     unlockedItem.unlockName == itemId)
                             where !foundItem
-                            select new Unlock(itemId, "Item", true, 0, 0, 0)
+                            select new Unlock(itemId, myType: "Item", isUnlocked: true, myCost: 0, myCost2: 0,
+                                myCost3: 0)
                             {
                                 onlyInCharacterCreation = false, unavailable = false, unlocked = true
                             })

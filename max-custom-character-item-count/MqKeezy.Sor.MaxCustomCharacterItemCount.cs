@@ -16,20 +16,23 @@ namespace mqKeezy_MaxCustomCharacterItemCount
         {
             private class InvDatabasePatch
             {
-                [HarmonyPatch(typeof(InvDatabase), "AddItemPlayerStart")]
+                [HarmonyPatch(typeof(InvDatabase), methodName: "AddItemPlayerStart")]
                 private class AddItemPlayerStart
                 {
                     [HarmonyPrefix]
                     private static bool Prefix(ref InvDatabase __instance, ref string itemName, ref int itemCount)
                     {
-                        var item = __instance.AddItem(itemName, itemCount);
+                        InvItem item = __instance.AddItem(itemName, itemCount);
                         if (__instance.agent.agentName == "Custom" && item.rechargeAmount <= 0 &&
                             item.itemType != "Money" && (item.stackable ||
                                                          item.itemType == "WeaponProjectile" ||
                                                          item.itemType == "WeaponMelee" ||
                                                          item.itemType == "WeaponThrown" ||
                                                          item.itemType == "Wearable"))
+                        {
                             itemCount = 99999;
+                        }
+
                         __instance.DestroyItem(item);
                         item = null;
 

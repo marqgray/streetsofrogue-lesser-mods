@@ -12,10 +12,10 @@ namespace mqKeezy_Mutator_FreeAmmoRefills
 
         private void Awake()
         {
-            Mutator = RogueLibs.CreateCustomMutator("mqKeezy.FreeAmmoRefills",
-                true,
-                new CustomNameInfo("Free Ammo Dispenser Refills"),
-                new CustomNameInfo(""));
+            Mutator = RogueLibs.CreateCustomMutator(id: "mqKeezy.FreeAmmoRefills",
+                unlockedFromStart: true,
+                new CustomNameInfo(english: "Free Ammo Dispenser Refills"),
+                new CustomNameInfo(english: ""));
 
             new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
         }
@@ -24,7 +24,7 @@ namespace mqKeezy_Mutator_FreeAmmoRefills
         {
             private class PlayfieldObjectPatch
             {
-                [HarmonyPatch(typeof(PlayfieldObject), "determineMoneyCost", typeof(int), typeof(string))]
+                [HarmonyPatch(typeof(PlayfieldObject), methodName: "determineMoneyCost", typeof(int), typeof(string))]
                 private class DetermineMoneyCost
                 {
                     [HarmonyPrefix]

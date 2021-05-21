@@ -25,20 +25,25 @@ namespace mqKeezy_Mutator_LargerLevels
 
         private void Awake()
         {
-            Mutator = RogueLibs.CreateCustomMutator("mqKeezy.LargerLevels",
-                true,
-                new CustomNameInfo("Larger Levels"),
-                new CustomNameInfo(""));
+            Mutator = RogueLibs.CreateCustomMutator(id: "mqKeezy.LargerLevels",
+                unlockedFromStart: true,
+                new CustomNameInfo(english: "Larger Levels"),
+                new CustomNameInfo(english: ""));
 
-            configLevelSizePercentage = Config.Bind("General", "LevelSizePercentage", 200,
+            configLevelSizePercentage = Config.Bind(section: "General", key: "LevelSizePercentage", defaultValue: 200,
+                description:
                 "The size of all levels will be multiplied by this percentage. You can configure this to your liking, but be careful of setting these values too high or low or there may be issues. Ex: 100 = 100%, 50 = 50%, 300 = 300%. There are safety min & max caps on the maps to prevent errors. A higher value such as 400 would guarantee max level size for every area.");
+
             new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
         }
 
         public static int ModifyMaxLevelSize(int value)
         {
             if (Mutator?.IsActive == true)
-                return (int) Mathf.Clamp(value * (configLevelSizePercentage.Value / 100f), 10, 64);
+            {
+                return (int) Mathf.Clamp(value * (configLevelSizePercentage.Value / 100f), min: 10, max: 64);
+            }
+
             return value;
         }
 
@@ -53,16 +58,20 @@ namespace mqKeezy_Mutator_LargerLevels
 
         private static IEnumerable<CodeInstruction> TranspileFields(IEnumerable<CodeInstruction> instructions)
         {
-            var codes = instructions.ToList();
+            List<CodeInstruction> codes = instructions.ToList();
 
-            for (var i = 0; i < codes.Count; i++)
+            for (int i = 0; i < codes.Count; i++)
             {
-                var t = codes[i];
+                CodeInstruction t = codes[i];
                 if (i > 3 && codes[i - 1].OperandIs(levelSizeMaxInfoField) &&
                     codes[i - 2].opcode == OpCodes.Ldc_I4_S && codes[i - 3].opcode == OpCodes.Ldarg_0
                 )
-                    foreach (var codeInstruction in InsertMaxLevelSizeInstructions())
+                {
+                    foreach (CodeInstruction codeInstruction in InsertMaxLevelSizeInstructions())
+                    {
                         yield return codeInstruction;
+                    }
+                }
 
                 yield return t;
             }
