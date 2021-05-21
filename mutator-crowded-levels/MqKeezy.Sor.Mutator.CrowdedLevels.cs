@@ -19,5 +19,9 @@ namespace mqKeezy_Mutator_CrowdedLevels
 
             new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
         }
+
+        private class Patches
+        {
+        }
     }
 }
