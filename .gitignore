@@ -33,3 +33,9 @@
 /mutator-larger-levels/bin
 /mutator-larger-levels/libs
 /mutator-larger-levels/obj
+/mutator-crowded-levels/obj
+/mutator-crowded-levels/bin
+/mutator-crowded-levels/libs
+/mutator-multiple-disasters/libs
+/mutator-multiple-disasters/obj
+/mutator-multiple-disasters/bin
