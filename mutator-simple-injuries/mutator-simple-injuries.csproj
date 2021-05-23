@@ -46,6 +46,9 @@
         <Reference Include="BepInEx.Harmony, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>libs\BepInEx.Harmony.dll</HintPath>
         </Reference>
+        <Reference Include="com.unity.multiplayer-hlapi.Runtime, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>libs\com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+        </Reference>
         <Reference Include="RogueLibs, Version=2.1.1.0, Culture=neutral, PublicKeyToken=null">
             <HintPath>libs\RogueLibs.dll</HintPath>
         </Reference>
