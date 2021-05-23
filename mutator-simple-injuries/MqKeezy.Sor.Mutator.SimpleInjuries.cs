@@ -198,13 +198,13 @@ namespace mqKeezy_Mutator_SimpleInjuries
                 key: "BleedScaleMin",
                 defaultValue: 20,
                 description:
-                "The percentage of health when a dweller starts to bleed. Ex: 20 = 20%, 30 = 30%, 50 = 50%.");
+                "The minimum percentage scale of blood splatters. Ex: 20 = 20%, 30 = 30%, 50 = 50%.");
 
             configBleedScaleMaxPercentage = Config.Bind(section: "General",
                 key: "BleedScaleMax",
                 defaultValue: 50,
                 description:
-                "The percentage of health when a dweller starts to bleed. Ex: 20 = 20%, 30 = 30%, 50 = 50%.");
+                "The maximum percentage scale of blood splatters. Ex: 20 = 20%, 30 = 30%, 50 = 50%.");
 
             new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
         }
