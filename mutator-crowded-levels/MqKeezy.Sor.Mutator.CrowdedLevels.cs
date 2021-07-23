@@ -15,7 +15,7 @@ namespace mqKeezy_Mutator_CrowdedLevels
     [BepInPlugin(ModInfo.BepInExPluginId, ModInfo.Title, ModInfo.Version)]
     public class MqkSorMutatorCrowdedLevels : BaseUnityPlugin
     {
-	    private static ConfigEntry<int> configCrowdedLevelScale;
+        private static ConfigEntry<int> configCrowdedLevelScale;
         private static UnlockBuilder Mutator;
 
         private static readonly MethodInfo applyAgentMultiplierMethodInfo = AccessTools.Method(
@@ -25,32 +25,32 @@ namespace mqKeezy_Mutator_CrowdedLevels
 
         public static int ApplyAgentMultiplier(int bigTries)
         {
-	        return Mutator?.Unlock.IsEnabled == true
-			        ? bigTries * configCrowdedLevelScale.Value / 100
-			        : bigTries;
+            return Mutator?.Unlock.IsEnabled == true
+                    ? bigTries * configCrowdedLevelScale.Value / 100
+                    : bigTries;
         }
 
         private void Awake()
         {
-	        Mutator = RogueLibs.CreateCustomUnlock(new MutatorUnlock(
-					        name: "mqKeezy.CrowdedLevels",
-					        unlockedFromStart: true
-			        ))
-			        .WithName(new CustomNameInfo(english: "Crowded Levels"))
-			        .WithDescription(new CustomNameInfo(english: ""));
+            Mutator = RogueLibs.CreateCustomUnlock(new MutatorUnlock(
+                            name: "mqKeezy.CrowdedLevels",
+                            unlockedFromStart: true
+                    ))
+                    .WithName(new CustomNameInfo(english: "Crowded Levels"))
+                    .WithDescription(new CustomNameInfo(english: ""));
 
-	        configCrowdedLevelScale = Config.Bind(section: "General", key: "CrowdedLevelScale", defaultValue: 300,
+            configCrowdedLevelScale = Config.Bind(section: "General", key: "CrowdedLevelScale", defaultValue: 300,
                 description:
                 "The number of dwellers in all levels will be multiplied by this percentage. Ex: 100 = 100%, 50 = 50%, 300 = 300%.");
 
-	        new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
+            new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
         }
         
         private static class Patches
         {
-	        private static class LoadLevelPatch
+            private static class LoadLevelPatch
             {
-	            [PublicAPI]
+                [PublicAPI]
                 [HarmonyPatch]
                 private static class SetupMore3_3
                 {
