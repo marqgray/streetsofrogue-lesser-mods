@@ -8,36 +8,18 @@ namespace mqKeezy_Mutator_FreeLoadoutRefills
     [BepInPlugin(ModInfo.BepInExPluginId, ModInfo.Title, ModInfo.Version)]
     public class MqkSorMutatorFreeLoadoutRefills : BaseUnityPlugin
     {
-        public static CustomMutator Mutator;
+        public static UnlockBuilder Mutator;
 
         public void Awake()
         {
-            Mutator = RogueLibs.CreateCustomMutator(id: "mqKeezy.FreeLoadoutRefills",
-                unlockedFromStart: true,
-                new CustomNameInfo(english: "Free Loadout Refills"),
-                new CustomNameInfo(english: ""));
+            Mutator = RogueLibs.CreateCustomUnlock(new MutatorUnlock(
+                    name: "mqKeezy.FreeLoadoutRefills",
+                    unlockedFromStart: true
+                ))
+                .WithName(new CustomNameInfo(english: "Free Loadout Refills"))
+                .WithDescription(new CustomNameInfo(english: ""));
 
             new Harmony(ModInfo.BepInExHarmonyPatchesId).PatchAll();
-        }
-
-        private class Patches
-        {
-            private class PlayfieldObjectPatch
-            {
-                [HarmonyPatch(typeof(PlayfieldObject),
-                    methodName: "determineMoneyCost",
-                    typeof(InvItem),
-                    typeof(int),
-                    typeof(string))]
-                private class DetermineMoneyCost
-                {
-                    [HarmonyPrefix]
-                    private static bool Prefix(ref string transactionType)
-                    {
-                        return Mutator?.IsActive != true || transactionType != "LoadoutMachine";
-                    }
-                }
-            }
         }
     }
 }

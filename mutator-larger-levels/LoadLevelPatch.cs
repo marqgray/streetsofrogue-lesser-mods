@@ -8,7 +8,7 @@ using JetBrains.Annotations;
 namespace mqKeezy_Mutator_LargerLevels
 {
     [PublicAPI]
-    [HarmonyPatch(typeof(LoadLevel))]
+    [HarmonyPatch(declaringType: typeof(LoadLevel))]
     public static class LoadLevelPatch
     {
         private static readonly FieldInfo levelSizeMaxInfoField =
@@ -17,7 +17,7 @@ namespace mqKeezy_Mutator_LargerLevels
         private static readonly MethodInfo modifyMaxLevelSizeField =
             AccessTools.Method(typeof(MqkSorMutatorLargerLevels), nameof(MqkSorMutatorLargerLevels.ModifyMaxLevelSize));
 
-        [HarmonyPatch("CreateInitialMap")]
+        [HarmonyPatch(methodName: "CreateInitialMap")]
         [HarmonyTranspiler]
         private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
